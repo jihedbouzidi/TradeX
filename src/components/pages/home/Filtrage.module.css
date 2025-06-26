@@ -1,0 +1,122 @@
+.filterSection {
+  margin-top: 150px;
+  width: 370px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(54, 54, 54, 0.373);
+  height: 60vh;
+  transition: all 0.3s ease;
+  margin-right: 30px;
+  position: relative;
+  z-index: 10;
+}
+
+.filterSection.sticky {
+  position: fixed;
+  top: 20px;
+  width: 350px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-20px);
+    opacity: 0.9;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.filterSection h2 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2e4576;
+  margin-bottom: 15px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.searchContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e3e7;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  border-color: #2e4576;
+  box-shadow: 0 0 0 3px rgba(46, 69, 118, 0.1);
+  outline: none;
+}
+
+.searchButton {
+  padding: 12px;
+  background-color: #2e4576;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #1a2c4d;
+}
+
+.searchButton:disabled {
+  background-color: #8cb5e9;
+  cursor: not-allowed;
+}
+
+.select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e3e7;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 14px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232e4576' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 16px;
+}
+
+.select:focus {
+  border-color: #2e4576;
+  box-shadow: 0 0 0 3px rgba(46, 69, 118, 0.1);
+  outline: none;
+}
+
+.filterColumn {
+  margin-bottom: 20px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .filterSection {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .filterSection.sticky {
+    width: calc(100% - 40px);
+    top: 10px;
+  }
+}
